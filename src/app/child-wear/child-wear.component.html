@@ -1,0 +1,50 @@
+<div class="mens-wear-container">
+  <h1 >Childrens Wear</h1>
+</div>
+
+<div class="container">
+  <div class="product-container">
+    <div class="product-main">
+      <img [src]="selectedProduct.image" alt="{{ selectedProduct.name }}" >
+    </div>
+    <div class="product-list">
+      <!-- <img *ngFor="let product of products" [src]="product" (click)="selectProduct(product)" alt="Product Image"> -->
+      <div class="product-grid">
+          <div class="product-item" *ngFor="let product of products">
+            <img (mouseover)="selectProduct(product)" [src]="product.image" alt="{{ product.name }}" class="product-image">
+            <!-- <h3 class="product-name">{{ product.name }}</h3> -->
+            <p class="product-description">{{ product.name }}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <div class="container">
+    <div class="main-content">
+      <h2>Childrens Wear</h2>
+      <div class="product-display">
+        <div class="large-product">
+          <img [src]="selectedProduct.image" alt="Large Product">
+        </div>
+        <div class="small-products">
+          <div class="product" *ngFor="let product of products">
+            <img (mouseover)="selectProduct(product)" [src]="product.image" alt="{{ product.name }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+     
+  <div id="modal" class="modal">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
+  
+  
+  
+  
+
